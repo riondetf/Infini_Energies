@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section-blue {
+  min-height: 100vh;
+  background-color: #00b4ff; 
+  background-image: 
+    radial-gradient(circle at 0% 0%, #9460ea 0%, transparent 40%),
+    radial-gradient(circle at 100% 50%, #0022ff 0%, transparent 60%),
+    radial-gradient(circle at 100% 100%, #0011aa 0%, transparent 50%),
+    radial-gradient(circle at 10% 90%, #00d4ff 0%, transparent 50%);
+}
+
+body {
+    font-family: 'Nexa', sans-serif;
+    line-height: 1.6;
+    color: #333;
+
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #000000;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav img {
+    height: 30px !important;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.top_logo {
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+}
+.top_logo img {
+    width: 100%;
+    height: auto;
+}
+
+.top_titre {
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: black;
+    width: 30%;
+    height: 15%;
+}
+.top_titre p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+}
+
+.top_spe {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+.top_spe p {
+    font-size: 2rem;
+}
+.top_spe ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.slider_mid {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+h1 {
+    font-family: 'Nexa', sans-serif;
+    font-size: clamp(1.5rem, 5vw, 3.5rem) !important;
+}
+
+h2 {
+    font-family: 'Nexa', sans-serif;
+    font-size: clamp(1.25rem, 4vw, 3rem) !important;
+    margin-left: 10%;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 2vw, 2rem) !important;
+}
+
+ul {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 2vw, 2rem) !important;
+    margin-left: 10%;
+}
+
+
+
+.slider-wrapper {
+    width: 80%;
+    padding: 20px;
+    margin: clamp(2rem, 8vh, 10rem) auto 0;
+    
+}
+
+.slider-card {
+    background-color: rgba(148, 96, 234, 0.4);
+    border-radius: 40px; /* Bords très arrondis */
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.slides-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    display: none; /* Masqué par défaut */
+    gap: 40px;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: flex; /* Seule la slide active est affichée */
+}
+
+.slide-image {
+    flex: 0 0 40%; /* L'image prend 40% de la largeur */
+}
+
+.slide-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.slide-text {
+    flex: 1;
+    color: #4a4a52; /* Gris foncé tirant légèrement sur le violet */
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.slide-text p {
+    font-size: 15px !important;
+    margin-bottom: 15px;
+}
+
+.slide-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Styles pour les boutons (flèches) */
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.btn-nav {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+.btn-nav:hover:not(:disabled) {
+    transform: scale(1.1);
+}
+
+.btn-nav svg {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-nav:disabled {
+    cursor: not-allowed;
+}
+
+.btn-nav:disabled svg polyline,
+.btn-nav:disabled svg path {
+    stroke: #c4a6c9; /* Couleur grisée/violette pour la flèche désactivée */
+}
+
+/* Animation douce lors du changement de slide */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+
+
+/* Mode responsive pour mobile (empile l'image et le texte) */
+@media (max-width: 768px) {
+    .slide.active {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .slide-image {
+        width: 100%;
+    }
+    
+    .slide-image img {
+        height: 250px;
+    }
+}
+
+.section-transition {
+  /* 1. On retire le background-color bleu et les radial-gradients ici */
+  /* On ne garde QUE le dégradé lissé du transparent vers le beige pur */
+  background-image: linear-gradient(to bottom, transparent 0%, #f6e7d0 80%);
+  
+  /* 2. L'astuce magique : on fait "monter" cette section sur la section bleue */
+  margin-top: -200px; 
+  min-height: 200px; /* Doit être au moins égal à la marge négative */
+  
+  /* 3. On ajoute du padding pour repousser votre contenu vers le bas (pour ne pas qu'il chevauche le texte du dessus) */
+  padding-top: 200px;
+  padding-bottom: 2rem;
+  
+  /* 4. On s'assure que le fondu passe bien au-dessus de la section bleue */
+  position: relative;
+  z-index: 2;
+}
+
+.section-beige {
+    background: #f6e7d0;
+    padding: 2rem 0;
+}
+
+.mid_comp {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 2rem 0;
+    justify-content: space-around;
+    margin: 0 10% 0 10%;
+    gap: 10%;
+}
+.mid_comp div {
+    flex: 1;
+    text-align: left;
+    background-color: rgba(0, 251, 255, 0.4);
+    border-radius: 20px;
+}
+.mid_comp div ul li {
+    padding: 0.2rem;
+    font-size: 20px;
+    color: #4a4a52; /* Gris foncé tirant légèrement sur le violet */
+}
