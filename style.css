@@ -4,181 +4,174 @@
     box-sizing: border-box;
 }
 
-.section-blue {
-  min-height: 100vh;
-  background-color: #00b4ff; 
-  background-image: 
-    radial-gradient(circle at 0% 0%, #9460ea 0%, transparent 40%),
-    radial-gradient(circle at 100% 50%, #0022ff 0%, transparent 60%),
-    radial-gradient(circle at 100% 100%, #0011aa 0%, transparent 50%),
-    radial-gradient(circle at 10% 90%, #00d4ff 0%, transparent 50%);
-}
-
 body {
-    font-family: 'Nexa', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
-
+    background-color: #fff; /* Fond gris clair général */
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+/* Typographie spécifique */
+h1, h2, h3 {
+    font-family: 'Nexa', 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
+/* NAVBAR */
 nav {
     background-color: #000000;
-    padding: 0.5rem;
+    padding: 0.2rem 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-nav img {
-    height: 30px !important;
+.nav-logo {
+    height: 50px;
     vertical-align: middle;
-    margin-right: 10px;
 }
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
+
+/* SECTION HERO (BLEUE) */
+.section-blue {
+    background-color: #00b4ff; 
+    background-image: 
+        radial-gradient(circle at 0% 0%, #9460ea 0%, transparent 40%),
+        radial-gradient(circle at 100% 50%, #0022ff 0%, transparent 60%),
+        radial-gradient(circle at 100% 100%, #0011aa 0%, transparent 50%),
+        radial-gradient(circle at 10% 90%, #00d4ff 0%, transparent 50%);
+    padding: 4rem 2rem;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1.2;
+    color: #111;
+}
+
+.hero-left h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-left p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: #222;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.logo-box {
+    background: white;
+    padding: 15px 30px;
+    border-radius: 5px;
     display: inline-block;
 }
 
-nav a:hover {
-    background-color: #555;
-}
-
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.logo {
-    height: 40px;
-    vertical-align: middle;
-}
-
-.top_logo {
-    position: absolute;
-    top: 15%;
-    left: 70%;
-    transform: translateX(-50%);
-    margin-bottom: 2rem;
-}
-.top_logo img {
+.logo-box img {
     width: 100%;
+    max-width: 500px;
     height: auto;
 }
 
-.top_titre {
-    position: absolute;
-    bottom: 20%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    color: black;
-    width: 30%;
-    height: 15%;
-}
-.top_titre p {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    overflow-wrap: break-word; 
-    word-wrap: break-word;
+.specialites-box {
+    color: #222;
 }
 
-.top_spe {
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-}
-.top_spe p {
-    font-size: 2rem;
-}
-.top_spe ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.specialites-box p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
-.slider_mid {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+.specialites-box ul {
+    list-style: none;
+    font-size: 1rem;
+    color: #222;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+/* SLIDERS (CARDS VIOLETTES) */
+.main-content {
+    padding-bottom: 4rem;
+    background-color: #fff;
 }
-
-
-h1 {
-    font-family: 'Nexa', sans-serif;
-    font-size: clamp(1.5rem, 5vw, 3.5rem) !important;
-}
-
-h2 {
-    font-family: 'Nexa', sans-serif;
-    font-size: clamp(1.25rem, 4vw, 3rem) !important;
-    margin-left: 10%;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(1rem, 2vw, 2rem) !important;
-}
-
-ul {
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(1rem, 2vw, 2rem) !important;
-    margin-left: 10%;
-}
-
-
 
 .slider-wrapper {
-    width: 80%;
-    padding: 20px;
-    margin: clamp(2rem, 8vh, 10rem) auto 0;
-    
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 20px;
 }
 
 .slider-card {
-    background-color: rgba(148, 96, 234, 0.4);
-    border-radius: 40px; /* Bords très arrondis */
+    background-color: #ebdffd; /* Violet très clair */
+    border-radius: 40px;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .slides-container {
     position: relative;
     overflow: hidden;
+    transition: height 0.4s ease;
 }
 
 .slide {
-    display: none; /* Masqué par défaut */
+    display: none;
     gap: 40px;
     align-items: center;
-    animation: fadeIn 0.5s ease-in-out;
+    opacity: 0;
 }
 
 .slide.active {
-    display: flex; /* Seule la slide active est affichée */
+    display: flex;
+}
+
+.slide-left {
+    animation: slideFromRight 0.5s ease forwards;
+}
+
+.slide-right {
+    animation: slideFromLeft 0.5s ease forwards;
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .slide-image {
-    flex: 0 0 40%; /* L'image prend 40% de la largeur */
+    flex: 1;
 }
 
 .slide-image img {
@@ -186,30 +179,26 @@ ul {
     height: 350px;
     object-fit: cover;
     border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .slide-text {
     flex: 1;
-    color: #4a4a52; /* Gris foncé tirant légèrement sur le violet */
-    font-size: 15px;
-    line-height: 1.5;
+    color: #4a4a52;
+    font-size: 0.95rem;
 }
 
 .slide-text p {
-    font-size: 15px !important;
     margin-bottom: 15px;
 }
 
-.slide-text p:last-child {
-    margin-bottom: 0;
+.presentation-text {
+    font-size: 1.1rem;
 }
 
-/* Styles pour les boutons (flèches) */
 .slider-controls {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     margin-top: 25px;
 }
 
@@ -217,95 +206,291 @@ ul {
     background: none;
     border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
     transition: transform 0.2s ease;
 }
 
-.btn-nav:hover:not(:disabled) {
-    transform: scale(1.1);
-}
-
 .btn-nav svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
+    stroke: #000;
 }
 
-.btn-nav:disabled {
-    cursor: not-allowed;
+.btn-nav:disabled svg {
+    stroke: #bda8c4;
 }
 
-.btn-nav:disabled svg polyline,
-.btn-nav:disabled svg path {
-    stroke: #c4a6c9; /* Couleur grisée/violette pour la flèche désactivée */
-}
-
-/* Animation douce lors du changement de slide */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateX(10px); }
     to { opacity: 1; transform: translateX(0); }
 }
 
+/* TITRES DE SECTIONS */
+.section-title {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 0 20px;
+    color: #111;
+}
+
+.center-title {
+    text-align: center;
+}
+
+/* NOS COMPÉTENCES */
+.section-competences {
+    margin: 4rem 0;
+}
+
+.comp-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.comp-box {
+    flex: 1;
+    background-color: #d0fcf4; /* Cyan clair */
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.comp-box ul {
+    list-style: none;
+}
+
+.comp-box ul li {
+    font-size: 1.1rem;
+    color: #4a4a52;
+    margin-bottom: 5px;
+}
 
 
-/* Mode responsive pour mobile (empile l'image et le texte) */
+
+/* FORMULAIRE DE CONTACT */
+.section-formulaire {
+    padding: 4rem 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 15px 15px 20px;
+    background-color: #d8d8d8;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    caret-color: #000;
+    transition: all 0.25s ease;
+}
+
+/* Bordures visibles */
+.input-cyan {
+    box-shadow: inset 6px 0 0 #00f0ff;
+}
+
+.input-purple {
+    box-shadow: inset 6px 0 0 #a64aff;
+}
+
+.input-blue {
+    box-shadow: inset 6px 0 0 #0044ff;
+}
+
+.input-black {
+    box-shadow: inset 6px 0 0 #111;
+    height: 150px;
+    resize: none;
+}
+
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    transform: translateX(4px);
+    background-color: #d8d8d8;
+}
+
+/* Glow localisé (subtil) */
+.input-cyan:focus {
+    box-shadow: inset 10px 0 0 #00e5ff, 2px 0 8px rgba(0,229,255,0.3);
+}
+
+.input-purple:focus {
+    box-shadow: inset 10px 0 0 #9b4dff, 2px 0 8px rgba(155,77,255,0.3);
+}
+
+.input-blue:focus {
+    box-shadow: inset 10px 0 0 #0033ff, 2px 0 8px rgba(0,51,255,0.3);
+}
+
+.input-black:focus {
+    box-shadow: inset 10px 0 0 #000, 2px 0 6px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+.rgpd-text {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: -5px;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-envoyer {
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 10px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-envoyer:hover {
+    background: #000;
+    color: #fff;
+}
+
+.contact-footer-text {
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    padding: 4rem 20px;
+    color: #fff;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-right: 200px;
+    display: flex;
+    gap: 200px;
+    justify-content: space-between;
+}
+
+.footer-left {
+    flex: 2;
+}
+
+.footer-logo-box {
+    background: white;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer-logo-box img {
+    height: 40px;
+}
+
+.footer-left p {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.footer-right {
+    flex: 1;
+}
+
+.footer-right h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-right p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+    }
+    .hero-right {
+        width: 100%;
+        align-items: center; /* Centre le logo sur mobile */
+        text-align: center;
+    }
+    .specialites-box ul {
+        text-align: left; /* Garde la liste alignée à gauche */
+    }
+    .comp-container {
+        flex-direction: column;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
 @media (max-width: 768px) {
     .slide.active {
         flex-direction: column;
         gap: 20px;
     }
-    
-    .slide-image {
-        width: 100%;
-    }
-    
     .slide-image img {
         height: 250px;
     }
+    .form-row {
+        flex-direction: column;
+    }
+    .slider-card {
+        padding: 20px;
+    }
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-right: 0;
+        display: flex;
+        gap: 50px;
+        justify-content: space-between;
+    }
 }
 
-.section-transition {
-  /* 1. On retire le background-color bleu et les radial-gradients ici */
-  /* On ne garde QUE le dégradé lissé du transparent vers le beige pur */
-  background-image: linear-gradient(to bottom, transparent 0%, #f6e7d0 80%);
-  
-  /* 2. L'astuce magique : on fait "monter" cette section sur la section bleue */
-  margin-top: -200px; 
-  min-height: 200px; /* Doit être au moins égal à la marge négative */
-  
-  /* 3. On ajoute du padding pour repousser votre contenu vers le bas (pour ne pas qu'il chevauche le texte du dessus) */
-  padding-top: 200px;
-  padding-bottom: 2rem;
-  
-  /* 4. On s'assure que le fondu passe bien au-dessus de la section bleue */
-  position: relative;
-  z-index: 2;
-}
-
-.section-beige {
-    background: #f6e7d0;
-    padding: 2rem 0;
-}
-
-.mid_comp {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    padding: 2rem 0;
-    justify-content: space-around;
-    margin: 0 10% 0 10%;
-    gap: 10%;
-}
-.mid_comp div {
-    flex: 1;
-    text-align: left;
-    background-color: rgba(0, 251, 255, 0.4);
-    border-radius: 20px;
-}
-.mid_comp div ul li {
-    padding: 0.2rem;
-    font-size: 20px;
-    color: #4a4a52; /* Gris foncé tirant légèrement sur le violet */
+html, body {
+    overflow-x: hidden; /* Empêche la page de scroller de gauche à droite */
+    width: 100%;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f6;
 }
