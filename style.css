@@ -197,7 +197,7 @@ body::before {
     background: linear-gradient(135deg, rgba(24, 220, 255, 0.144), rgba(181, 59, 211, 0.411));
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: rotate(8deg);
-}aaaaaaa
+}
 
 body::after {
     top: 120vh;
@@ -614,14 +614,7 @@ footer::before {
     .slider-card {
         padding: 20px;
     }
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-right: 0;
-        display: flex;
-        gap: 50px;
-        justify-content: space-between;
-    }
+
     .main-content::after {
     top: 900px;
     right: 0%;
@@ -630,6 +623,11 @@ footer::before {
     background: linear-gradient(135deg, rgba(0, 68, 255, 0.14), rgba(0, 68, 255, 0.02));
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     transform: rotate(-12deg);
+}
+.logo-box img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 }
 
@@ -657,5 +655,4 @@ p,
     text-justify: inter-word;
     hyphens: auto;
 }
-
 
