@@ -643,11 +643,9 @@ html {
 }
 
 p,
-li,
 .slide-text,
 .hero-left p,
 .specialites-box p,
-.comp-box ul li,
 .contact-footer-text p,
 .footer-left p,
 .footer-right p,
@@ -656,4 +654,5 @@ li,
     text-justify: inter-word;
     hyphens: auto;
 }
+
 
